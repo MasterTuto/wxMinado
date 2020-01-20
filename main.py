@@ -207,7 +207,9 @@ class CampoMinado(wx.Frame):
 			for vizinho in vizinhosPosicoes:
 				ni = i+vizinho[0]
 				nj = j+vizinho[1]
+				print((ni, nj))
 				if (ni >= 0 and nj >= 0 and ni < len(self.botoes) and nj < len(self.botoes[0]) and not(self.bombas[ni][nj]) and (ni, nj) not in processados):
+					print((ni, nj))
 					processados.add((ni, nj))
 					self.liberarBombas(ni, nj, processados)
 
@@ -255,8 +257,9 @@ class CampoMinado(wx.Frame):
 			fimDoJogo = True
 			self.mostrarBombas()
 			self.bloquearBotoes()
-		else:
-			self.liberarBombas(i, j)
+		
+		self.liberarBombas(i, j, set())
+		print('===========================')
 
 		vitoria = self.verificarVitoria(botao)
 		
