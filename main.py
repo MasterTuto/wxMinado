@@ -251,7 +251,7 @@ class CampoMinado(wx.Frame):
 		i, j = [(i, self.botoes[i].index(botao)) for i in range(self.alturaTabuleiro) if botao in self.botoes[i]][0]
 
 		if (self.bombas[i][j]):
-			wx.MessageDialog(self, message="PERDEU MLK KKKKKKKKKKKjjjjj", style=wx.ICON_INFORMATION).ShowModal()
+			wx.MessageDialog(self, message="PERDEU MLK KKKKKKKKKKKjjjjjj", style=wx.ICON_INFORMATION).ShowModal()
 			fimDoJogo = True
 			self.mostrarBombas()
 			self.bloquearBotoes()
