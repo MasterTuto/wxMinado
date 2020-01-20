@@ -260,7 +260,7 @@ class CampoMinado(wx.Frame):
 
 		vitoria = self.verificarVitoria(botao)
 		
-		if vitoria:
+		if vitoria and not (self.bombas[i][j]):
 			wx.MessageDialog(self, message="GANHOU hein, fdp...", style=wx.ICON_INFORMATION).ShowModal()
 			self.bloquearBotoes()
 
